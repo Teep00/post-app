@@ -1,0 +1,99 @@
+body {
+  width: 500px;
+  margin: 0 auto;
+  font-family: sans-serif;
+}
+
+#postForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+
+#postForm input,
+#postForm textarea {
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.template {
+  display: none;
+}
+
+.newPost {
+  border: 1px solid #ccc;
+  margin: 10px 0;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.editInput p {
+  background-color: white;
+  width: 90px;
+  margin: 0;
+  text-align: center;
+}
+
+.editInput input {
+  width: 200px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+}
+
+#buttonContainer {
+  display: flex;
+}
+
+.likeButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.likeButton:hover {
+  background-color: rgb(244, 124, 144);
+  border-color: rgb(244, 124, 144);
+}
+
+.likeButton:hover .heart {
+  fill: rgb(245, 51, 84);
+}
+
+.heart {
+  padding: 0;
+  transition: 0.3s;
+}
+
+.valueLikes {
+  padding: 0 5px;
+  margin: 0;
+}
+.showAll {
+  display: none;
+}
+
+#sort {
+  margin: 0 auto;
+}
+
+.sortButtonArea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

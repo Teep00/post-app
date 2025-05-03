@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>投稿アプリ</title>
+    <link rel="stylesheet" href="stylesheet.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <form id="postForm">
+      <input type="text" id="title" placeholder="タイトル" />
+      <textarea id="body" placeholder="内容"></textarea>
+      <input type="number" id="userId" placeholder="ユーザーID" />
+      <button type="submit">送信</button>
+      <button type="button" class="filter">ユーザーIDでフィルターする</button>
+      <button type="button" class="showAll">全て表示</button>
+      <div id="sort">
+        <button type="button" class="sortButton">並び替え</button>
+      </div>
+    </form>
+
+    <div id="posts">
+      <!-- テンプレート要素 -->
+      <div class="post template">
+        <h3>タイトル: ○○○</h3>
+        <p>本文: △△△</p>
+        <small>ユーザーID: 123</small>
+        <div id="buttonContainer">
+          <button type="button" class="likeButton">
+            <svg
+              class="heart"
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="gray"
+              style="cursor: pointer"
+            >
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+                  2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09
+                  C13.09 3.81 14.76 3 16.5 3
+                  19.58 3 22 5.42 22 8.5
+                  c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"
+              />
+            </svg>
+            <p class="likesValue"></p>
+            いいね
+          </button>
+          <button class="deleteButton">削除</button>
+          <button class="editButton">編集</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
